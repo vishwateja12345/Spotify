@@ -10,25 +10,93 @@
     <meta name="viewport" content="width=device-width" />
     <title>GetAlbums</title>
 </head>
-<body>
+<body style="background-color:gainsboro">
     <div class="form-horizontal">
+        <div class="form-group">
+            &nbsp;&nbsp;
+            <table align="center">
+                <tr>
+                    <td>
+                        <h2>
+                            Album Data
+                        </h2>
+                    </td>
+                </tr>
+            </table>
 
-        @foreach (var property in Model.artists)
+            &nbsp;&nbsp;
+            <table align="center">
+                <tr>
+                    <td>
+                        @Html.Label("Type")
+                    </td>
+                    &nbsp;&nbsp;
+                    <td>
+                        @Html.DisplayFor(x => x.album_type)
+                    </td>
+                </tr>
+                &nbsp;&nbsp;
+                <tr>
+                    <td>
+                        @Html.Label("Name")
+                    </td>
+                    &nbsp;&nbsp;
+                    <td>
+                        @Html.DisplayFor(x => x.name)
+                    </td>
+                </tr>
+                &nbsp;&nbsp;
+                <tr>
+                    <td>
+                        @Html.Label("Release_Date")
+                    </td>
+                    &nbsp;&nbsp;
+                    <td>
+                        @Html.DisplayFor(x => x.release_date)
 
-        {
+                    </td>
+                </tr>
+                &nbsp;&nbsp;
 
-            <div class="form-group">
 
-                @Html.Label(property.id)
+                @foreach (var property in Model.artists)
 
-                @Html.Editor(property.id)
-                @Html.Label(property.name)
+                {
 
-                @Html.Editor(property.name)
 
-            </div>
+                    <tr>
+                        <td>
+                            @Html.Label("Id")
+                        </td>
+                        &nbsp;&nbsp;
+                        <td>
+                            @Html.DisplayFor(x => x.id)
 
-        }
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            @Html.Label("URI")
+                        </td>
+                        &nbsp;&nbsp;
+                        <td>
+                            @Html.DisplayFor(x => x.uri)
 
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            @Html.Label("Reference")
+                        </td>
+                        &nbsp;&nbsp;
+                        <td>
+                            @Html.DisplayFor(x => x.href)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
 </body>
 </html>
