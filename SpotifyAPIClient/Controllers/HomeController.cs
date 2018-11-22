@@ -87,6 +87,10 @@ namespace SpotifyAPIClient.Controllers
             }
 
         }
+        public ActionResult GetSpotify()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();

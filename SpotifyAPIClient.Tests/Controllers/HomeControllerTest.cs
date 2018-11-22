@@ -26,16 +26,16 @@ namespace SpotifyAPIClient.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void CheckArtistDataIsnotOrNot()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.GetArtists() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
